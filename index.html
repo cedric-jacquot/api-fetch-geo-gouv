@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Géo</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Connexion à l'API geo.gouv</h1>
+        <p>
+            Lien de connexion à l'API : https://geo.api.gouv.fr/communes?codePostal=CODE_POSTAL&fields=,nom,code,codesPostaux,centre,surface,codeDepartement,departement,codeRegion,region,population&format=json&geometry=centre
+        </p>
+        <form action="">
+            <label for="zipcode">Code postal : </label>
+            <input type="number" name="zipcode" id="zipcode" required>
+            <button id="validate" type="submit">OK</button>
+            <label for="city"></label>
+            <select name="city" id="city">
+                <option value="">- Choisissez votre ville -</option>
+            </select>
+        </form>
+
+    <p id="erreur"></p>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
