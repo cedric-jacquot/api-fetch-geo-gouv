@@ -11,17 +11,16 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Connexion à l'API geo.gouv</h1>
-        <p class="mt-3">
-            Test de connexion avec l'API Géo du gouvernement : <strong>retrouver une ville à partir de son code postal</strong>, voir
-            site <a href="https://api.gouv.fr/les-api/api-geo">https://api.gouv.fr/les-api/api-geo</a>
-        </p>
-        <p class="small fw-lighter">
-            Lien de connexion à l'API :
-            https://geo.api.gouv.fr/communes?codePostal=CODE_POSTAL&fields=,nom,code,codesPostaux,centre,surface,codeDepartement,departement,codeRegion,region,population&format=json&geometry=centre
-        </p>
-        <!-- <form action="">
+    <div class="container-sm">
+        <div class="">
+            <h1>Connexion à l'API geo.gouv</h1>
+            <p class="mt-3">
+                Test de connexion avec l'API Géo du gouvernement : <strong>retrouver une ville à partir de son code
+                    postal</strong>, voir
+                site <a href="https://api.gouv.fr/les-api/api-geo"
+                    target="_blank">https://api.gouv.fr/les-api/api-geo</a>
+            </p>            
+            <!-- <form action="">
             <label for="zipcode">Code postal : </label>
             <input type="number" name="zipcode" id="zipcode" required>
             <button>OK</button>
@@ -30,11 +29,11 @@
             <select name="city" id="city">
                 <option value="">- Choisissez votre ville -</option>
             </select>
-        </form> -->
-
+            </form> -->
+        </div>
 
         <div class="row justify-content-center">
-            <form class="col-8">
+            <form action="" class="">
                 <div class="col-md-6">
                     <label for="firstname" class="form-label">Prénom</label>
                     <input type="text" class="form-control" id="firstname">
@@ -45,18 +44,18 @@
                 </div>
                 <div class="col-md-6">
                     <label for="birth">Date de naissance</label>
-                    <input type="date" class="form-control" id="birth" name="birth" value=""
-                        min="1900-01-01" max="2021-12-31">
+                    <input type="date" class="form-control" id="birth" name="birth" value="" min="1900-01-01"
+                        max="2021-12-31">
                 </div>
                 <div class="col-md-6">
                     <label for="zipcode" class="form-label">Code postal</label>
-                    <input type="text" name= "zipcode" class="form-control" id="zipcode">
+                    <input type="text" name="zipcode" class="form-control" id="zipcode">
                 </div>
                 <div class="col-md-6 mt-3 mb-3">
                     <label for="city">Ville</label>
                     <select name="city" id="city" class="form-select" aria-label="Default select example">
                         <option selected>Choisissez une ville</option>
-                      </select>
+                    </select>
                 </div>
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">Email</label>
@@ -70,11 +69,13 @@
                     <p>Dates du projet :</p>
                     <div class="col-md-6">
                         <label for="startAt">Date de début du projet</label>
-                        <input type="date" class="form-control" id="startAt" name="startAt" value="" min="2021-01-01" max="2025-12-31">
+                        <input type="date" class="form-control" id="startAt" name="startAt" value="" min="2021-01-01"
+                            max="2025-12-31">
                     </div>
                     <div class="col-md-6">
                         <label for="endAt">Date de fin du projet</label>
-                        <input type="date" class="form-control" id="endAt" name="endAt" value="" min="2021-01-01" max="2025-12-31">
+                        <input type="date" class="form-control" id="endAt" name="endAt" value="" min="2021-01-01"
+                            max="2025-12-31">
                     </div>
                 </div>
                 <div class="col-md-6">
