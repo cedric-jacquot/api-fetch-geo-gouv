@@ -12,23 +12,20 @@ let fetOptions =
     mode: 'cors',
 }
 
-function api(event) {
-    event.preventDefault();
-
-    // clear select options
-    elementSelectCity.options.length = 0;
-
+function api() {
     let zipcode = elementInputZipcode.value;
 
-    if (zipcode.length == 0) {
-        alert("Le code postal est vide");
-    } else {
+    // clear select options
+    elementSelectCity.options.length = 1;
+
+    if (zipcode.length > 4) {
+
         let APILink = "https://geo.api.gouv.fr/communes?codePostal=" + zipcode + "&fields=,nom,code,codesPostaux,centre,surface,codeDepartement,departement,codeRegion,region,population&format=json&geometry=centre";
 
         fetch(APILink, fetOptions)
             .then(convertFromJson)
             .then(displayCities);
-    }    
+    }
 }
 
 // convert response in json
@@ -37,7 +34,7 @@ function convertFromJson(response) {
 }
 
 // then add cities to select options
-function displayCities (cities) {
+function displayCities(cities) {
     console.log(cities);
 
     for (let city in cities) {
@@ -54,4 +51,4 @@ function displayCities (cities) {
     }
 }
 
-document.getElementById('validate').addEventListener('click', api);
+elementInputZipcode.addEventListener('blur', api);
