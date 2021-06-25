@@ -1,4 +1,4 @@
-// exemple avec la ville "gondreville"
+// example with "gondreville" city
 // https://geo.api.gouv.fr/communes?codePostal=54840&fields=,nom,code,codesPostaux,centre,surface,codeDepartement,departement,codeRegion,region,population&format=json&geometry=centre
 
 const elementInputZipcode = document.getElementById('zipcode');
